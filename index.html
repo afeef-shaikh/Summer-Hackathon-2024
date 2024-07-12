@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Treasures Stoop Sale</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Droid+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <img src="Brooklyn Stoop Sale_transparent.png" alt="Logo" class="logo">
+        <nav>
+            <button id="homeButton">Home</button>
+        </nav>
+        <h1>Brooklyn Treasures Stoop Sale</h1>
+        <p>Discover Hidden Gems in the Heart of Brooklyn</p>
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop id="heroVideo">
+            <source src="Background Video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h2>Join Us for a Fun Stoop Sale!</h2>
+            <p>Enjoy great deals and meet your neighbors.</p>
+            <button id="playButton" onclick="toggleMusic()">Play Lofi Music</button>
+            <div id="trackInfo" style="display: none;">
+                <p>Now Playing: Good Night</p>
+                <button id="pauseButton" onclick="pauseResumeMusic()" style="display: none;">Pause</button>
+            </div>
+            <H3>Save the Date - August 15, 2024!</H3>
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>About the Event</h2>
+        <p>The Brooklyn Treasures Stoop Sale is your chance to explore and purchase unique items right from the charming stoops of Brooklyn...</p>
+    </section>
+
+    <hr class="divider">
+
+    <section id="event-details" class="content-section">
+        <h2>Event Details</h2>
+        <p><strong>Date:</strong> August 15, 2024</p>
+        <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
+        <p><strong>Location:</strong> 2nd Pl. and Court St</p>
+        <p><strong>Hosted by:</strong> Chelsea and Lil</p>
+        <p>Come early to get the best picks!</p>
+    </section>
+
+    <hr class="divider">
+
+    <section id="products" class="content-section">
+        <h2>Products Offered</h2>
+        <div class="product-columns">
+            <div class="product-column" style="background-image: url('clothes.jpg');">
+                <h3>Clothes</h3>
+                <p>Gently used clothes, slightly worn.</p>
+            </div>
+            <div class="product-column" style="background-image: url('home_goods.jpg');">
+                <h3>Home Goods</h3>
+                <p>Unique finds for your home.</p>
+            </div>
+            <div class="product-column" style="background-image: url('shoes.jpg');">
+                <h3>Shoes</h3>
+                <p>Stylish shoes for every occasion.</p>
+            </div>
+            <div class="product-column" style="background-image: url('streetwear.jpg');">
+                <h3>Street Wear</h3>
+                <p>Trendy streetwear at great prices.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+
+    <section id="map" class="content-section">
+      <h2>Location</h2>
+      <p>Explore the map below to find participating stoops and plan your treasure hunt. We recommend using public transportation or carpooling as parking may be limited.</p>
+      <div id="map-container">
+          <div id="map"></div>
+      </div>
+  </section>
+
+  <hr class="divider">
+
+    <section id="share" class="content-section">
+        <h2>Share This Event</h2>
+        <p>Help spread the word about the Brooklyn Treasures Stoop Sale!</p>
+        <div class="social-buttons">
+            <button onclick="shareTweet()">Tweet</button>
+            <button onclick="shareFacebook()">Share on Facebook</button>
+            <button onclick="shareLinkedIn()">Share on LinkedIn</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Brooklyn Treasures Stoop Sale. All Rights Reserved.</p>
+        <p>Follow us on <a href="#">Social Media Links</a></p>
+    </footer>
+
+    <audio id="lofiMusic" src="good-night-160166.mp3" loop></audio>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB4kQ6DL2DwMnGmROCZp_5esnUeD6L2qIY", v: "weekly"});</script>
+    <script src="scripts.js"></script>
+</body>
+</html>

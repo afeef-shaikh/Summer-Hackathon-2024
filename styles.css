@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Droid+Serif&display=swap");
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    transition: background 0.2s linear, color 0.2s linear;
+}
+
+header {
+    text-align: center;
+    background: #3e2723;
+    color: #ffffff;
+    padding: 1em;
+    position: relative;
+    height: 150px;
+    top: 0; /* Add this to make the header stick to the top */
+    left: 0; /* Add this to make the header full width */
+    right: 0;
+    width: 98%;
+    margin: 0 auto;
+}
+
+header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 80px; /* Adjust logo size */
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#homeButton {
+    padding: 0.5em;
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+#playButton, #pauseButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    opacity: 0.7; /* Decreased transparency */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.content-section {
+    background-color: #f8f1e4; /* Pastel beige background */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-column {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 22%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.product-column h3 {
+    margin: 10px 0;
+}
+
+.content-section {
+  background-color: #f8f1e4; /* Pastel beige background */
+  margin: 20px 0;
+  padding: 20px;
+  bottom: 30px;
+  border-radius: 8px;
+  margin-bottom: auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+#map-container {
+  height: 300px; /* Adjust the height as needed */
+  margin-top: 20px; /* Space above the map */
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3e2723;
+    color: #fff;
+}
+
+.social-buttons {
+    margin-top: 10px;
+}
+
+.social-buttons button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #1c1c1c;
+}
+
+.dark-mode .content-section {
+    background-color: #333;
+}
+
+.dark-mode footer {
+    background-color: #1c1c1c;
+}
